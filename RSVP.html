@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initail-scale=1" charset="utf-8">
+        <title>RSVP</title>
+    </head>
+    <body>
+        <form action="nomfundo@mahlako.co.za" method="post" enctype="text/plain">
+            <div>
+                <h1>Name and Surname</h1>
+                <input id="userInput"> <br> <br>
+            </div>
+            <h2>Are you coming</h2>
+            <div class="container">
+                <input type="radio" name="radio" id="opt1" onclick="display(1)" unchecked>
+                <label for="opt1" class="label1">
+                    <span>YES</span><br>
+                </label><br>
+
+                <input type="radio" name="radio" id="opt2" onclick="display(0)" unchecked>
+                <label for="opt2" class="label2">
+                    <span>NO</span><br>
+                </label><br>
+            </div>
+            <div>
+                <center>
+                <textarea rows="7" cols="35" name="Reason" id="reason" hidden placeholder="Please provide a reason for your answer"></textarea>
+                </center>
+            </div><br>
+            <button onclick="myFunction()" value="Send">Submit</button>
+            <h1 id="message"></h1>
+
+            <p><a href="Invite2.html">Back to my Invite</a></p>
+
+            <style>
+                body{background-color: grey; text-align: center; color: floralwhite;}
+            </style>
+
+            <script>
+                /*show/hide txtbox*/
+                function display(x){
+                    if(x==0)
+                    document.getElementById('reason').style.display='block';
+                    else
+                    document.getElementById('reason').style.display='none';
+                    return;
+                }
+
+                /*submit func for yes*/
+                function myFunction(){
+                    let userInput = document.querySelector("#userInput");
+                    let message = document.querySelector("#message");
+                    var ele = document.getElementById('opt1');
+
+                    if(ele.checked)
+                        message.innerHTML = "See you There " + " " + userInput.value + "!";
+                    else
+                        message.innerHTML = "Sad you won't make it" + " " + userInput.value;
+                }
+            </script>
+        </form>
+    </body>    
+</html>
