@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initail-scale=1" charset="utf-8">
-        <link rel="stylesheet" href="stylesheet.css">
-        <script type="text/javascript" src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial scale=1">
+        <title>RSVP for Mahlako's Boat Cruise Adventure</title>
+        <link rel="stylesheet" href="rsvpstyle.css">
     </head>
-    <body>
-        <header id="popUp">
-            <p id="RSVP">
-                RSVP for this Event by 22 November 2022
-                <span style="color: salmon; font-size:25;"
-                >&nbsp <a href="RSVP.html">RSVP NOW</a></span>
-            </p> 
-        </header>
 
-        <div id="flip-card">
-            <div id="flip-card-inner">
-                <div id="flip-card-front">
-                    <div id="stamp">
-                        <img src="map-logo.png">
-                    </div>
-                    <div id="Name">Mahlako Team Member</div>
-                </div>
-                <div id="flip-card-back">
-                    <div class="lid" id="one">
-                        <p id="companyName">Mahlako A Phahla Investments</p>
-                    </div>
-                    <div class="lid" id="two"></div>
-                    <div id="envelope"></div>
-                    <div id="letter">
-                        <img src="InviteYE.jpg" height="490px" width="590px">
-                    </div>
-                </div>
-            </div>
+    <body>
+        <div class="container">
+            <form action="https://formsubmit.co/nomfundobiyela25@gmail.com" method=POST>
+                <h3>RSVP: Mahlako's Boat Bruise Adventure</h3><br>
+                <input type="text" name="Full Name" id="userInput" placeholder="Full Name" required>
+                <input type="email" name="Email Address" id="email" placeholder="Email Address" required><br>
+
+                <h4 id="helloname">ARE YOU COMING</h4>
+                <p><input type="radio" name="RSVP answer" value="Yes" id="opt1" onclick="display(1)" unchecked>YES</p>                
+                <p><input type="radio" name="RSVP answer" value="No" id="opt2" onclick="display(0)" unchecked>NO</p>
+                <textarea name="Reason I can't make it" id="message" rows="4" placeholder="Why can't you make it?" hidden></textarea>
+                <button type="send">Send</button>
+
+                <script>
+                    /*show/hide txtbox*/
+                    function display(x){
+                        if(x==0)
+                        document.getElementById('message').style.display='block';
+                        else
+                        document.getElementById('message').style.display='none';
+                        return;
+                    }
+
+                </script>
+            </form>
         </div>
     </body>
 </html>
