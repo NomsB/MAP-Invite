@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+
   }
   
   #flip-card {
@@ -43,7 +44,7 @@
   }
   
   #flip-card-front {
-    background-color: #c8c8c8;
+    background: linear-gradient(to bottom,white, #065535,white);
     color: black;
   }
   
@@ -77,9 +78,9 @@
     left: 0;
   
     border-top: 200px solid transparent;
-    border-right: 200px solid #bebebe;
-    border-left: 200px solid #bebebe;
-    border-bottom: 300px solid #b0b0b0;
+    border-right: 200px solid #065535;
+    border-left: 200px solid #065535;
+    border-bottom: 300px solid white;
   
     z-index: 3;
   }
@@ -98,7 +99,7 @@
   }
   
   #one {
-    border-top: 200px solid #a8a8a8;
+    border-top: 200px solid #ff5C77;
     transform: rotateX(0deg);
     z-index: 3;
   }
@@ -117,14 +118,14 @@
   
   #stamp img {
     float: right;
-    width: 35%;
+    width: 40%;
   }
   
   #Name {
     position: absolute;
     text-align: center;
     top: 50%;
-    left: 35%;
+    right: 25%;
     color: white;
     font-weight: 800;
     font-size: 20px;
@@ -155,7 +156,7 @@
   }
   
   #popUp {
-    height: 50px;
+    height: 40px;
     width: 100%;
     position: absolute;
     top: 0px;
