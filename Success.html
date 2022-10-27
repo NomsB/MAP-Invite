@@ -2,14 +2,27 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial scale=1">
-        <title>Sent Successfully</title>
-        <link rel="stylesheet" href="rsvpstyle.css">
+        <title>Sent successfully</title>
+        <link rel="stylesheet" href="successstyle.css">
     </head>
 
     <body>
         <div class="container">
-            <h1>Thank You!</h1>
-            <p>Sent successfully!</p>
+            <div class="popUp">
+                <img src="tick.png">
+                <h2>Sent Successfully!</h2>
+                <p>Your details have been successfully submitted. Thank You!</p>
+                <button id="close" type="button">Close</button>
+            </div>
         </div>
+
+        <script>
+            let btnClose = document.querySelector('#close');
+            let myTab;
+
+            btnClose.addEventListener('click', ()=>{
+               window.close();
+            });
+        </script>
     </body>
 </html>
